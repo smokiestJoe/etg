@@ -55,27 +55,38 @@ body {
 
 
 #htmlPageHeaderWrapper {
-
-    min-height: 4em;
+    margin-top:0.6vw;
     background-color: pink;
-
-
+}
+#htmlPageHeaderWrapper h2 {
+    margin:0;
 }
 
 #htmlPageContent {
+    margin-top:1.5vw;
     min-height: 10em;
     background-color: brown;
 }
 
 /*************************************************************/
 .navTab {
-    color:white;
+    color:#FFFFFF;
     background-color: #727272;
+    padding-top:0.2vw;
+    padding-bottom:0.2vw;
+}
+.navTab h3 {
+    padding:0;
+    margin:0;
 }
 
 .navTab a {
-    color:white;
+    color:#FFFFFF;
     text-decoration: none;
+}
 
+footer {
+    text-align: center;
+    background-color: white;
 }
 

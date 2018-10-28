@@ -17,6 +17,7 @@ abstract class HtmlPageAbstract
                 'name' => 'Home',
                 'link' => '/etg/public/www/index.php'
             ],
+            'content' => 'indexContent',
         ],
         'aboutUs' => [
             'name' => 'aboutUs',
@@ -26,6 +27,7 @@ abstract class HtmlPageAbstract
                 'name' => 'About us',
                 'link' => '/etg/public/www/pages/aboutUs.php'
             ],
+            'content' => 'aboutUsContent',
         ],
         'services' => [
             'name' => 'services',
@@ -35,6 +37,7 @@ abstract class HtmlPageAbstract
                 'name' => 'Services',
                 'link' => '/etg/public/www/pages/services.php'
             ],
+            'content' => 'servicesContent',
         ],
         'workingTogether' => [
             'name' => 'workingTogether',
@@ -44,6 +47,7 @@ abstract class HtmlPageAbstract
                 'name' => 'Together',
                 'link' => '/etg/public/www/pages/workingTogether.php'
             ],
+            'content' => 'workingTogtherContent',
         ],
         'partners' => [
             'name' => 'partners',
@@ -53,6 +57,7 @@ abstract class HtmlPageAbstract
                 'name' => 'Partners',
                 'link' => '/etg/public/www/pages/partners.php'
             ],
+            'content' => 'partnersContent',
         ],
     ];
 
@@ -84,6 +89,14 @@ abstract class HtmlPageAbstract
     protected static $htmlHeadTitle = "";
 
     protected static $htmlBodyHeader = "";
+
+    protected static $htmlPageContent = "";
+
+
+
+
+
+
 
     public $htmlHead;
 

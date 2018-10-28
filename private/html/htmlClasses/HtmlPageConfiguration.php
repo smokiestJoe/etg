@@ -18,6 +18,8 @@ class HtmlPageConfiguration extends HtmlPageAbstract
 
        parent::$htmlBodyHeader = $this->pages[$this->strPageName]['header'];
 
+       parent::$htmlPageContent = $this->pages[$this->strPageName]['content'];
+
     }
 
 }

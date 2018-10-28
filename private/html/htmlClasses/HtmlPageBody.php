@@ -70,9 +70,17 @@ class HtmlPageBody extends HtmlPageAbstract
 
                             <div id="htmlPageContent">
 
+                                <?= parent::$htmlPageContent; ?>
 
                             </div>
 
+                            <div id="htmlPageFooterWrapper">
+
+                                <footer>
+                                    <small> 2018 copyright &copy; ETG</small>
+                                </footer>
+
+                            </div>
 
                         </div>
 
@@ -81,9 +89,7 @@ class HtmlPageBody extends HtmlPageAbstract
                     </div>
 
 
-                    <div id="htmlPageFooterWrapper">
 
-                    </div>
 
                 </div>
 
@@ -104,3 +110,4 @@ class HtmlPageBody extends HtmlPageAbstract
         return $this->buildHtmlPageBody();
     }
 }
+

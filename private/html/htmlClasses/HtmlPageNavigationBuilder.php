@@ -37,7 +37,7 @@ class HtmlPageNavigationBuilder extends HtmlPageAbstract
            }
         }
 
-        $this->strNavUlList =  "<div class=\"col-md-1 navTab\"></div>" .  $this->strNavLiList . "<div class=\"col-md-1 navTab\"></div>" ;
+        $this->strNavUlList =  "<div class=\"col-md-1 spacer\"></div>" .  $this->strNavLiList . "<div class=\"col-md-1 spacer\"></div>" ;
     }
 
     public function getNavigationBar()
