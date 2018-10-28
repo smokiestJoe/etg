@@ -1,0 +1,81 @@
+body {
+
+}
+
+.htmlPageBodyWrapper {
+    /*width: 100%;*/
+    min-height: 100vh;
+    background-color: #c4e3f3;
+}
+
+/******** PAGE TOP **********/
+.htmlPageBodyTopWrapper {
+    /*width: 100%;*/
+    /*height: 17.5%;*/
+    background-color: orange;
+}
+
+#htmlPageBannerWrapper {
+    /*width: 100%;*/
+    /*height: 80%;*/
+    background-color: blueviolet;
+}
+#htmlPageNavigationBarWrapper {
+    /*width: 90%;*/
+    /*height: 100%;*/
+    /*margin-left: 5%;*/
+}
+
+#htmlPageCategoryLinkWrapper {
+
+}
+
+/******* PAGE BOTTOM ********/
+.htmlPageBodyBottomWrapper {
+    /*width: 100%;*/
+    min-height: 82.5%;
+    background-color: green;
+}
+
+#htmlPageContentWrapperOuter {
+    /*width: 90%;*/
+    /*height: 100%;*/
+    /*margin-left: 5%;*/
+    background-color: yellow;
+}
+
+#htmlPageContentWrapperInner {
+    /*width: 90%;*/
+    /*height: 100%;*/
+    /*margin-left: 5%;*/
+    background-color: blue;
+
+    min-height: 30em;
+}
+
+
+#htmlPageHeaderWrapper {
+
+    min-height: 4em;
+    background-color: pink;
+
+
+}
+
+#htmlPageContent {
+    min-height: 10em;
+    background-color: brown;
+}
+
+/*************************************************************/
+.navTab {
+    color:white;
+    background-color: #727272;
+}
+
+.navTab a {
+    color:white;
+    text-decoration: none;
+
+}
+
