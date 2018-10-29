@@ -8,7 +8,7 @@
 
 class HtmlPageConfiguration extends HtmlPageAbstract
 {
-    protected $strPageName;
+    private $strPageName;
 
     public function __construct($strPageName)
     {

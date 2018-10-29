@@ -8,11 +8,11 @@
 
 class HtmlPageNavigationBuilder extends HtmlPageAbstract
 {
-    public $strPageName = "";
+    private $strPageName = "";
 
-    public $strNavLiList = "";
+    private $strNavLiList = "";
 
-    public $strNavUlList = "";
+    private $strNavUlList = "";
 
     public function __construct($strPageName)
     {
@@ -22,7 +22,7 @@ class HtmlPageNavigationBuilder extends HtmlPageAbstract
     }
 
 
-    public function buildNavigationBar()
+    private function buildNavigationBar()
     {
         foreach ($this->pages as $page) {
 

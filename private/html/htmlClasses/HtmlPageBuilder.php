@@ -31,8 +31,12 @@ class HtmlPageBuilder extends HtmlPageAbstract
             # 6: Build site navigation
             $navigationBar = new HtmlPageNavigationBuilder($strPageName);
 
+            # 7: Build page Footer
+            $pageFooter = new HtmlPageFooter();
 
-            $htmlPageBody = new HtmlPageBody($navigationBar->getNavigationBar());
+//            var_dump($pageFooter->getHtmlPageFooter());
+
+            $htmlPageBody = new HtmlPageBody($navigationBar->getNavigationBar(), $pageFooter->getHtmlPageFooter());
             $htmlPageBody->renderHtmlPageBody();
 
 

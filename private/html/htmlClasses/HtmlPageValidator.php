@@ -10,7 +10,13 @@ class HtmlPageValidator extends HtmlPageAbstract
 {
     private $strValidationKey;
 
-    public function handleValidationException($isPageValid)
+
+    public function __construct($strPageName)
+    {
+        $this->strValidationKey = $strPageName;
+    }
+
+    private function handleValidationException($isPageValid)
     {
         if (! $isPageValid) {
 
@@ -18,12 +24,7 @@ class HtmlPageValidator extends HtmlPageAbstract
         }
     }
 
-    public function __construct($strPageName)
-    {
-        $this->strValidationKey = $strPageName;
-    }
-
-    public function checkValidationKey()
+    private function checkValidationKey()
     {
         if (array_key_exists($this->strValidationKey, $this->pages)) {
 

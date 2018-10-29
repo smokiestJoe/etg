@@ -8,16 +8,16 @@
 
 class HtmlPageLinkTagBuilder extends HtmlPageAbstract
 {
-    public $arrLinkTags = [];
+    private $arrLinkTags = [];
 
-    public $strLinkTag = "";
+    private $strLinkTag = "";
 
     public function __construct()
     {
         $this->buildHtmlLinkTags();
     }
 
-    public function buildHtmlLinkTags()
+    private function buildHtmlLinkTags()
     {
         foreach ($this->htmlHeadLinks as $tagType) {
 

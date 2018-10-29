@@ -8,14 +8,18 @@
 
 class HtmlPageBody extends HtmlPageAbstract
 {
-    public $strNavigationBar = "";
+    private $strNavigationBar = "";
 
-    public function __construct($strNavigationBar)
+    private $strPageFooter = "";
+
+    public function __construct($strNavigationBar, $strPageFooter)
     {
         $this->strNavigationBar = $strNavigationBar;
+
+        $this->strPageFooter = $strPageFooter;
     }
 
-    public function buildHtmlPageBody()
+    private function buildHtmlPageBody()
     {
     ?>
         <body>
@@ -76,9 +80,7 @@ class HtmlPageBody extends HtmlPageAbstract
 
                             <div id="htmlPageFooterWrapper">
 
-                                <footer>
-                                    <small> 2018 copyright &copy; ETG</small>
-                                </footer>
+                               <?= $this->strPageFooter; ?>
 
                             </div>
 
@@ -87,9 +89,6 @@ class HtmlPageBody extends HtmlPageAbstract
                         <div class="spacer col-md-1"></div>
 
                     </div>
-
-
-
 
                 </div>
 

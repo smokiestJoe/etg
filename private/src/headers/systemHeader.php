@@ -20,7 +20,7 @@ require_once __DIR__ . "/../../html/htmlClasses/HtmlPageHead.php";
 
 
 require_once __DIR__ . "/../../html/htmlClasses/HtmlPageNavigationBuilder.php";
-
+require_once __DIR__ . "/../../html/htmlClasses/HtmlPageFooter.php";
 
 
 

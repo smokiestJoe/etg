@@ -8,14 +8,14 @@
 
 class HtmlPageMetaTagBuilder extends HtmlPageAbstract
 {
-    public $arrMetaTags = [];
+    private $arrMetaTags = [];
 
     public function __construct()
     {
         $this->buildHtmlMetaTags();
     }
 
-    public function buildHtmlMetaTags()
+    private function buildHtmlMetaTags()
     {
         foreach ($this->htmlHeadMetaData as $name => $content) {
 

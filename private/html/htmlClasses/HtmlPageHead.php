@@ -8,9 +8,9 @@
 
 class HtmlPageHead extends HtmlPageAbstract
 {
-    public $arrMetaTags;
+    private $arrMetaTags;
 
-    public $arrLinkTags;
+    private $arrLinkTags;
 
     public function __construct($arrMetaTags, $arrLinkTags)
     {
@@ -19,7 +19,7 @@ class HtmlPageHead extends HtmlPageAbstract
         $this->arrLinkTags = $arrLinkTags;
     }
 
-    public function buildHtmlPageHead()
+    private function buildHtmlPageHead()
     {
         ?>
         <html>
