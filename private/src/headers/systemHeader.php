@@ -10,22 +10,21 @@ error_reporting(E_ALL); ini_set('display_errors', '1');
 
 require_once  __DIR__ . "/contentHeader.php";
 
-require_once __DIR__ . "/../../html/htmlClasses/HtmlPageAbstract.php";
+require_once __DIR__ . "/../../html/htmlPageClasses/HtmlPageAbstract.php";
 
-require_once __DIR__ . "/../../html/htmlClasses/HtmlPageValidator.php";
-require_once __DIR__ . "/../../html/htmlClasses/HtmlPageConfiguration.php";
-require_once __DIR__ . "/../../html/htmlClasses/HtmlPageMetaTagBuilder.php";
-require_once __DIR__ . "/../../html/htmlClasses/HtmlPageLinkTagBuilder.php";
-require_once __DIR__ . "/../../html/htmlClasses/HtmlPageHead.php";
+require_once __DIR__ . "/../../html/htmlPageClasses/HtmlPageValidator.php";
+require_once __DIR__ . "/../../html/htmlPageClasses/HtmlPageConfiguration.php";
+require_once __DIR__ . "/../../html/htmlPageClasses/HtmlPageMetaTagBuilder.php";
+require_once __DIR__ . "/../../html/htmlPageClasses/HtmlPageLinkTagBuilder.php";
+require_once __DIR__ . "/../../html/htmlPageClasses/HtmlPageHead.php";
+
+require_once __DIR__ . "/../../html/htmlPageClasses/HtmlPageNavigationBuilder.php";
+require_once __DIR__ . "/../../html/htmlPageClasses/HtmlPageFooter.php";
+require_once __DIR__ . "/../../html/htmlPageClasses/HtmlPageGlobalScriptBuilder.php";
+require_once __DIR__ . "/../../html/htmlPageClasses/HtmlPageLocalScriptBuilder.php";
+
+require_once __DIR__ . "/../../html/htmlPageClasses/HtmlPageBody.php";
 
 
-require_once __DIR__ . "/../../html/htmlClasses/HtmlPageNavigationBuilder.php";
-require_once __DIR__ . "/../../html/htmlClasses/HtmlPageFooter.php";
-
-
-
-require_once __DIR__ . "/../../html/htmlClasses/HtmlPageBody.php";
-
-
-require_once __DIR__ . "/../../html/htmlClasses/HtmlPageBuilder.php";
-require_once __DIR__ . "/../../html/htmlClasses/HtmlPageRenderer.php";
+require_once __DIR__ . "/../../html/htmlPageClasses/HtmlPageBuilder.php";
+require_once __DIR__ . "/../../html/htmlPageClasses/HtmlPageRenderer.php";

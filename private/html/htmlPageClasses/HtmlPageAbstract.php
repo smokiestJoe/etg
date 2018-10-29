@@ -18,6 +18,7 @@ abstract class HtmlPageAbstract
                 'link' => '/etg/public/www/index.php'
             ],
             'content' => 'indexContent',
+            'usescript' => false,
         ],
         'aboutUs' => [
             'name' => 'aboutUs',
@@ -28,6 +29,7 @@ abstract class HtmlPageAbstract
                 'link' => '/etg/public/www/pages/aboutUs.php'
             ],
             'content' => 'aboutUsContent',
+            'usescript' => false,
         ],
         'services' => [
             'name' => 'services',
@@ -38,6 +40,7 @@ abstract class HtmlPageAbstract
                 'link' => '/etg/public/www/pages/services.php'
             ],
             'content' => 'servicesContent',
+            'usescript' => true,
         ],
         'workingTogether' => [
             'name' => 'workingTogether',
@@ -47,7 +50,8 @@ abstract class HtmlPageAbstract
                 'name' => 'Together',
                 'link' => '/etg/public/www/pages/workingTogether.php'
             ],
-            'content' => 'workingTogtherContent',
+            'content' => 'workingTogetherContent',
+            'usescript' => false,
         ],
         'partners' => [
             'name' => 'partners',
@@ -58,6 +62,7 @@ abstract class HtmlPageAbstract
                 'link' => '/etg/public/www/pages/partners.php'
             ],
             'content' => 'partnersContent',
+            'usescript' => false,
         ],
     ];
 
@@ -83,7 +88,25 @@ abstract class HtmlPageAbstract
             'integrity' => 'na',
             'crossorigin' => 'na',
         ],
+    ];
 
+    protected $htmlScriptLinks = [
+        'jquery' => [
+            'call' => ['global'],
+            'src' => 'https://code.jquery.com/jquery-3.3.1.js',
+            'integrity' => 'sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=',
+            'crossorigin' => 'anonymous',
+        ],
+        'bootstrap' => [
+            'call' => ['global'],
+            'src' => 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js',
+            'integrity' => 'sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa',
+            'crossorigin' => 'anonymous',
+        ],
+        'services' => [
+            'call' => ['services'],
+            'src' => '/etg/public/www/javascript/services.js',
+        ],
     ];
 
     protected static $htmlHeadTitle = "";
@@ -91,6 +114,8 @@ abstract class HtmlPageAbstract
     protected static $htmlBodyHeader = "";
 
     protected static $htmlPageContent = "";
+
+    protected static $htmlPageLocalJavascript = false;
 
 
 

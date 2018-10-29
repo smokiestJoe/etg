@@ -34,9 +34,19 @@ class HtmlPageBuilder extends HtmlPageAbstract
             # 7: Build page Footer
             $pageFooter = new HtmlPageFooter();
 
-//            var_dump($pageFooter->getHtmlPageFooter());
+            # 8: Prepare any global script tags - jQuery, Bootstrap, etc...
+            $globalScriptTags = new HtmlPageGlobalScriptBuilder();
 
-            $htmlPageBody = new HtmlPageBody($navigationBar->getNavigationBar(), $pageFooter->getHtmlPageFooter());
+            # 9: Prepare any page specific tags here
+            $localScriptTags = new HtmlPageLocalScriptBuilder($strPageName);
+
+            # NEED TO LOAD INDIVIDUAL PAGE SCRIPTING HERE!!!!!!!
+            # ADD CLASS, BUILD SCRIPT LINKS,
+            # PASS IN!
+
+            $htmlPageBody = new HtmlPageBody($navigationBar->getNavigationBar(), $pageFooter->getHtmlPageFooter(),
+                $globalScriptTags->getScriptTagArray(), $localScriptTags->getScriptTagArray());
+
             $htmlPageBody->renderHtmlPageBody();
 
 
@@ -46,7 +56,5 @@ class HtmlPageBuilder extends HtmlPageAbstract
             // BUILD BODY
 
         }
-
-
     }
 }

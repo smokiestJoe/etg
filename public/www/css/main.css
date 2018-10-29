@@ -67,6 +67,27 @@ body {
     min-height: 10em;
     background-color: brown;
 }
+/*************************************************************/
+#it-solution-selection-services-link {
+    background-color: red;
+    min-height: 4em;
+}
+#business-change-management-services-link {
+    background-color: orange;
+    min-height: 4em;
+}
+#it-transformation-services-link {
+    background-color: yellow;
+    min-height: 4em;
+}
+#technical-delivery-services-link {
+    background-color: green;
+    min-height: 4em;
+}
+#support-services-link {
+    background-color: blue;
+    min-height: 4em;
+}
 
 /*************************************************************/
 .navTab {
@@ -89,4 +110,25 @@ footer {
     text-align: center;
     background-color: white;
 }
+/******************************************************/
+.body_diagram {
+    min-height: 4em;
+    background-color:mediumpurple;
+}
 
+/********************* RESPONSIVE BEHAVIOUR **********/
+.main_text {
+    font-weight: bold;
+}
+
+.main_text, .body_text {
+    font-size: 2.4rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .main_text, .body_text{
+        font-size: 1.6rem;
+    }
+}
+/**************************************************/

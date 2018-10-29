@@ -38,6 +38,4 @@ class HtmlPageLinkTagBuilder extends HtmlPageAbstract
     {
         return $this->arrLinkTags;
     }
-
-
 }

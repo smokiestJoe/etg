@@ -17,6 +17,7 @@ function aboutUsContent()
 
     <div class="body_text col-md-7">
         <p>
+            <br />
             We offer a flexible service that can be tailored to support your business across the end-to-end Transformation Programme – from concept through to delivery.
             <br />
             <br />

@@ -20,6 +20,15 @@ class HtmlPageConfiguration extends HtmlPageAbstract
 
        parent::$htmlPageContent = $this->pages[$this->strPageName]['content'];
 
+       $this->htmlPageJavascriptCheck();
     }
 
+    private function htmlPageJavascriptCheck()
+    {
+        if ($this->pages[$this->strPageName]['usescript'] == true) {
+
+            parent::$htmlPageLocalJavascript = true;
+
+        }
+    }
 }

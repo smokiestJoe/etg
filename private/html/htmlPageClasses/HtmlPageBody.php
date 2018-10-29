@@ -12,11 +12,19 @@ class HtmlPageBody extends HtmlPageAbstract
 
     private $strPageFooter = "";
 
-    public function __construct($strNavigationBar, $strPageFooter)
+    private $globalScriptTags = [];
+
+    private $localScriptTags = [];
+
+    public function __construct($strNavigationBar, $strPageFooter, $globalScriptTags, $localScriptTags)
     {
         $this->strNavigationBar = $strNavigationBar;
 
         $this->strPageFooter = $strPageFooter;
+
+        $this->globalScriptTags = $globalScriptTags;
+
+        $this->localScriptTags = $localScriptTags;
     }
 
     private function buildHtmlPageBody()
@@ -58,29 +66,27 @@ class HtmlPageBody extends HtmlPageAbstract
 
                         <div id="htmlPageContentWrapperInner" class="col-md-10">
 
-                            <div id="htmlPageSubCategoryLinkWrapper">
+                            <div id="htmlPageSubCategoryLinkWrapper" class="col-md-12">
 
                             </div>
 
-                            <div id="htmlPageSidebarWrapper">
+                            <div id="htmlPageSidebarWrapper" class="col-md-12">
 
                             </div>
 
-                            <div id="htmlPageHeaderWrapper">
+                            <div id="htmlPageHeaderWrapper" class="col-md-12">
 
                                 <header><h2><?= parent::$htmlBodyHeader; ?></h2></header>
 
                             </div>
 
-                            <div id="htmlPageContent">
+                            <div id="htmlPageContent" class="col-md-12">
 
-                                <?= parent::$htmlPageContent; ?>
+                                <?php
 
-                            </div>
+                                call_user_func(parent::$htmlPageContent);
 
-                            <div id="htmlPageFooterWrapper">
-
-                               <?= $this->strPageFooter; ?>
+                                ?>
 
                             </div>
 
@@ -90,11 +96,31 @@ class HtmlPageBody extends HtmlPageAbstract
 
                     </div>
 
+                    <div id="htmlPageFooterWrapper" class="col-md-12">
+
+                        <?= $this->strPageFooter; ?>
+
+                    </div>
+
                 </div>
 
             </div>
 
             <div id="htmlPageScriptingWrapper">
+
+                <?php
+
+                foreach ($this->globalScriptTags as $globalScriptTag) {
+
+                    echo $globalScriptTag;
+                }
+
+                foreach ($this->localScriptTags as $localScriptTag) {
+
+                    echo $localScriptTag;
+                }
+
+                ?>
 
             </div>
 
@@ -109,4 +135,3 @@ class HtmlPageBody extends HtmlPageAbstract
         return $this->buildHtmlPageBody();
     }
 }
-

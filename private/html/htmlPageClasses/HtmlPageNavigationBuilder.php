@@ -33,7 +33,6 @@ class HtmlPageNavigationBuilder extends HtmlPageAbstract
            } else {
 
                $this->strNavLiList .= "<div class=\"col-md-2 navTab\"><h3><a href='" . $page['navlink']['link'] .  "'>" . $page['navlink']['name'] . "</a></h3></div>";
-
            }
         }
 
@@ -44,5 +43,4 @@ class HtmlPageNavigationBuilder extends HtmlPageAbstract
     {
         return $this->strNavUlList;
     }
-
 }
