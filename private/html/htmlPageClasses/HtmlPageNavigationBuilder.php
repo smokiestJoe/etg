@@ -21,12 +21,11 @@ class HtmlPageNavigationBuilder extends HtmlPageAbstract
         $this->buildNavigationBar();
     }
 
-
     private function buildNavigationBar()
     {
         foreach ($this->pages as $page) {
 
-           if ($page['name'] == $this->strPageName) {
+           if ($page['name'] == $this->strPageName && $this->strPageName != 'services') {
 
                $this->strNavLiList .= "<div class=\"col-md-2 navTab\"><h3>" . $page['navlink']['name'] . "</h3></div>";
 

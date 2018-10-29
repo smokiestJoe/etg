@@ -125,10 +125,32 @@ footer {
     font-size: 2.4rem;
 }
 
+.service_buttons {
+    text-align: center;
+}
+
+.link_button {
+    font-size: 2rem;
+}
+
+.serviceLink {
+    padding: 0;
+}
+
+.servicesIcon {
+    margin:0!important;
+    padding: 0!important;
+
+    width:80%;
+    object-fit: contain;
+}
+/**************************************************/
 
 @media only screen and (max-width: 600px) {
-    .main_text, .body_text{
+
+    .main_text, .body_text, .link_button{
         font-size: 1.6rem;
     }
+
 }
 /**************************************************/
