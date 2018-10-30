@@ -41,11 +41,12 @@ function servicesContent()
 
         <div id="it-solution-selection-services-link" class="col-md-2 serviceLink">
             <button id="it-solution-selection-services-button" class="link_button btn btn-link">IT Solution Selection</button>
-            <img src="/etg/public/assets/images/magnifyingGlass.png" alt="magnifying_glass" class="servicesIcon" />
+            <img src="/etg/public/assets/images/search-icon.png" alt="magnifying_glass" class="servicesIcon" />
         </div>
 
         <div id="business-change-management-services-link" class="col-md-2 serviceLink">
             <button id="business-change-management-services-button" class="link_button btn btn-link">Business Change Management</button>
+            <img src="/etg/public/assets/images/change-icon.png" alt="magnifying_glass" class="servicesIcon" />
         </div>
 
         <div id="it-transformation-services-link" class="col-md-2 serviceLink">
