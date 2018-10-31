@@ -111,6 +111,10 @@ abstract class HtmlPageAbstract
             'call' => ['services'],
             'src' => '/etg/public/www/javascript/services/servicesFunctions.js',
         ],
+        'test' => [
+            'call' => ['services'],
+            'src' => '/etg/public/www/javascript/services/test.js',
+        ],
         'services' => [
             'call' => ['services'],
             'src' => '/etg/public/www/javascript/services/services.js',
