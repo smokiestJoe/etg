@@ -1,9 +1,11 @@
+/*global applicationNamespace,
+ */
 (function () {
 
-    alert("ONLINE");
+    "use strict";
 
-//    applicationNamespace.thisone.bindEvents();
+    // Bind Events
 
-    c.bindEvents();
+    applicationNamespace.services.servicesFunctions.bindEvents();
 
 }());

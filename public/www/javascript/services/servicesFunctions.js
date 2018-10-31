@@ -1,6 +1,6 @@
-/*global $, console
+/*global $, console, extendNamespace, applicationNamespace,
 */
-/* JS LINT Last performed 29.10.2018
+/* JS LINT Last performed 31.10.2018
 By: J.Rose
  */
 ;
@@ -9,6 +9,8 @@ By: J.Rose
     "use strict";
 
     var $self = extendNamespace(applicationNamespace, "applicationNamespace.services.servicesFunctions");
+
+    console.log($self);
 
     function onClickLoadItSolutionSelectionPartial() {
         var xhttp = new XMLHttpRequest();
@@ -63,7 +65,6 @@ By: J.Rose
         xhttp.onreadystatechange = function () {
             if (xhttp.readyState === 4 && xhttp.status === 200) {
                 document.getElementById("htmlPageContent").innerHTML = xhttp.responseText;
-                alert("LOADING SUPPORT");
                 bindEvents();
             }
         };

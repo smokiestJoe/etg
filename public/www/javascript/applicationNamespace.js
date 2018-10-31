@@ -1,9 +1,13 @@
 // Top level namespace
-
+// Last linted 31.10.18 - J.Rose
+;
 var applicationNamespace = applicationNamespace || {};
+    applicationNamespace.services = applicationNamespace.services || {};
 
 function extendNamespace (ns , ns_string)
 {
+    "use strict";
+
     var parts = ns_string.split(".");
 
     var parent = ns;
@@ -18,9 +22,9 @@ function extendNamespace (ns , ns_string)
 
     partsLength = parts.length;
 
-    for (count = 0; count < partsLength; count++) {
+    for (count = 0; count < partsLength; count += 1) {
 
-        if (typeof parent[parts[count]] === "undefined") {
+        if (parent[parts[count]] === undefined) {
 
             parent[parts[count]] = {};
         }
@@ -29,20 +33,4 @@ function extendNamespace (ns , ns_string)
     }
 
     return parent;
-
 }
-
-// sample usage:
-// extend myApp with a deeply nested namespace
-var mod = extendNamespace(applicationNamespace, 'applicationNamespace.modules.module2');
-// the correct object with nested depths is output
-console.log(mod);
-// minor test to check the instance of mod can also
-// be used outside of the myApp namesapce as a clone
-// that includes the extensions
-console.log(mod === applicationNamespace.modules.module2); //true
-// further demonstration of easier nested namespace
-// assignment using extend
-extendNamespace(applicationNamespace, 'moduleA.moduleB.moduleC.moduleD');
-extendNamespace(applicationNamespace, 'longer.version.looks.like.this');
-console.log(applicationNamespace);
