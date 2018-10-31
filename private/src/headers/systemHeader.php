@@ -8,6 +8,7 @@
 error_reporting(E_ALL); ini_set('display_errors', '1');
 
 
+// Classes
 require_once  __DIR__ . "/contentHeader.php";
 
 require_once __DIR__ . "/../../html/htmlPageClasses/HtmlPageAbstract.php";
@@ -28,3 +29,6 @@ require_once __DIR__ . "/../../html/htmlPageClasses/HtmlPageBody.php";
 
 require_once __DIR__ . "/../../html/htmlPageClasses/HtmlPageBuilder.php";
 require_once __DIR__ . "/../../html/htmlPageClasses/HtmlPageRenderer.php";
+
+
+require_once __DIR__ . "/../../html/htmlModules/services.php";

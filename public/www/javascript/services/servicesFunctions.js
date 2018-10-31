@@ -3,14 +3,19 @@
 /* JS LINT Last performed 29.10.2018
 By: J.Rose
  */
+;
 (function () {
 
     "use strict";
+
+    var $self = extendNamespace(applicationNamespace, "applicationNamespace.services.servicesFunctions");
+
     function onClickLoadItSolutionSelectionPartial() {
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
             if (xhttp.readyState === 4 && xhttp.status === 200) {
                 document.getElementById("htmlPageContent").innerHTML = xhttp.responseText;
+                bindEvents();
             }
         };
         xhttp.open("GET", "/../etg/public/ajaxXml/itSolutionSelection.php", true);
@@ -22,6 +27,7 @@ By: J.Rose
         xhttp.onreadystatechange = function () {
             if (xhttp.readyState === 4 && xhttp.status === 200) {
                 document.getElementById("htmlPageContent").innerHTML = xhttp.responseText;
+                bindEvents();
             }
         };
         xhttp.open("GET", "/../etg/public/ajaxXml/businessChangeManagement.php", true);
@@ -33,6 +39,7 @@ By: J.Rose
         xhttp.onreadystatechange = function () {
             if (xhttp.readyState === 4 && xhttp.status === 200) {
                 document.getElementById("htmlPageContent").innerHTML = xhttp.responseText;
+                bindEvents();
             }
         };
         xhttp.open("GET", "/../etg/public/ajaxXml/itTransformation.php", true);
@@ -44,6 +51,7 @@ By: J.Rose
         xhttp.onreadystatechange = function () {
             if (xhttp.readyState === 4 && xhttp.status === 200) {
                 document.getElementById("htmlPageContent").innerHTML = xhttp.responseText;
+                bindEvents();
             }
         };
         xhttp.open("GET", "/../etg/public/ajaxXml/technicalDelivery.php", true);
@@ -55,35 +63,42 @@ By: J.Rose
         xhttp.onreadystatechange = function () {
             if (xhttp.readyState === 4 && xhttp.status === 200) {
                 document.getElementById("htmlPageContent").innerHTML = xhttp.responseText;
+                alert("LOADING SUPPORT");
+                bindEvents();
             }
         };
         xhttp.open("GET", "/../etg/public/ajaxXml/support.php", true);
         xhttp.send();
     }
 
-    $("#it-solution-selection-services-button").on("click", function () {
+    function bindEvents() {
 
-        onClickLoadItSolutionSelectionPartial();
-    });
+        $("#it-solution-selection-services-button").on("click", function () {
 
-    $("#business-change-management-services-button").on("click", function () {
+            onClickLoadItSolutionSelectionPartial();
+        });
 
-        onClickLoadBusinessChangeManagementPartial();
-    });
+        $("#business-change-management-services-button").on("click", function () {
 
-    $("#it-transformation-services-button").on("click", function () {
+            onClickLoadBusinessChangeManagementPartial();
+        });
 
-        onClickLoadItTransformationPartial();
-    });
+        $("#it-transformation-services-button").on("click", function () {
 
-    $("#technical-delivery-services-button").on("click", function () {
+            onClickLoadItTransformationPartial();
+        });
 
-        onClickLoadTechnicalDeliveryPartial();
-    });
+        $("#technical-delivery-services-button").on("click", function () {
 
-    $("#support-services-button").on("click", function () {
+            onClickLoadTechnicalDeliveryPartial();
+        });
 
-        onClickLoadSupportPartial();
-    });
+        $("#support-services-button").on("click", function () {
+
+            onClickLoadSupportPartial();
+        });
+    }
+
+    $self.bindEvents = bindEvents;
 
 }());

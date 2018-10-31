@@ -14,8 +14,8 @@ function servicesContent()
         <p>
             Our specialist services are specifically deigned to work in partnership with you and your third-party
             supplier to ensure your business achieves maximum benefit from your digital transformation investment.
-            <br />
-            <br />
+            <br/>
+            <br/>
         </p>
     </div>
 
@@ -25,46 +25,17 @@ function servicesContent()
             anything else, we can provide digital consultants,
             specialist programme resource and technical experts to support your organisation in the design,
             build and delivery of your IT Transformation and Business Change Programme.
-            <br />
-            <br />
+            <br/>
+            <br/>
             <strong>
                 Take a look below to find out more about our services:
             </strong>
-            <br />
-            <br />
+            <br/>
+            <br/>
         </p>
     </div>
 
-    <div class="service_buttons col-md-12">
-
-        <div class="spacer col-md-1"></div>
-
-        <div id="it-solution-selection-services-link" class="col-md-2 serviceLink">
-            <button id="it-solution-selection-services-button" class="link_button btn btn-link">IT Solution Selection</button>
-            <img src="/etg/public/assets/images/search-icon.png" alt="magnifying_glass" class="servicesIcon" />
-        </div>
-
-        <div id="business-change-management-services-link" class="col-md-2 serviceLink">
-            <button id="business-change-management-services-button" class="link_button btn btn-link">Business Change Management</button>
-            <img src="/etg/public/assets/images/change-icon.png" alt="magnifying_glass" class="servicesIcon" />
-        </div>
-
-        <div id="it-transformation-services-link" class="col-md-2 serviceLink">
-            <button id="it-transformation-services-button" class="link_button btn btn-link">IT Transformation</button>
-        </div>
-
-        <div id="technical-delivery-services-link" class="col-md-2 serviceLink">
-            <button id="technical-delivery-services-button" class="link_button btn btn-link">Technical Delivery</button>
-        </div>
-
-        <div id="support-services-link" class="col-md-2 serviceLink">
-            <button id="support-services-button" class="link_button btn btn-link">Support</button>
-        </div>
-
-        <div class="spacer col-md-1"></div>
-
-    </div>
-
     <?php
-}
 
+    displayServiceModule();
+}

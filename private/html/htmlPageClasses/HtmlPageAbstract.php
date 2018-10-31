@@ -103,9 +103,17 @@ abstract class HtmlPageAbstract
             'integrity' => 'sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa',
             'crossorigin' => 'anonymous',
         ],
+        'namespace' => [
+            'call' => ['global'],
+            'src' => '/etg/public/www/javascript/applicationNamespace.js',
+        ],
+        'servicesFunctions' => [
+            'call' => ['services'],
+            'src' => '/etg/public/www/javascript/services/servicesFunctions.js',
+        ],
         'services' => [
             'call' => ['services'],
-            'src' => '/etg/public/www/javascript/services.js',
+            'src' => '/etg/public/www/javascript/services/services.js',
         ],
     ];
 
