@@ -127,6 +127,7 @@ class HtmlPageBody extends HtmlPageAbstract
         </body>
 
     </html>
+
     <?php
     }
 

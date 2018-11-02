@@ -13,7 +13,7 @@ displayServiceModule();
 
 <p>
 
-THIS IS THE AJAX CALL FOR SUPPORT
+    THIS IS THE AJAX CALL FOR SUPPORT
 
 </p>
 <script>

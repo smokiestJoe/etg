@@ -6,7 +6,7 @@
  * Time: 12:08
  */
 
-class HtmlPageRenderer extends HtmlPageAbstract
+class HtmlPageRenderer
 {
     public function renderHtmlPage($strPageName)
     {

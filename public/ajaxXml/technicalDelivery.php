@@ -13,8 +13,7 @@ displayServiceModule();
 ?>
 
 <p>
-
-
-THIS IS THE AJAX CALL FOR TECHNICAL DELIVERY
+    
+    THIS IS THE AJAX CALL FOR TECHNICAL DELIVERY
 
 </p>

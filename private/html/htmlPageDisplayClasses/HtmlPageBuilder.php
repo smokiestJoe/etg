@@ -6,7 +6,7 @@
  * Time: 12:08
  */
 
-class HtmlPageBuilder extends HtmlPageAbstract
+class HtmlPageBuilder
 {
     public function buildHtmlPage($strPageName)
     {
@@ -24,37 +24,30 @@ class HtmlPageBuilder extends HtmlPageAbstract
             # 4: Build link tags
             $linkTags = new HtmlPageLinkTagBuilder();
 
-            # 5: Begin construction of the page head
+            # 5: Prepare page head
             $htmlPageHead = new HtmlPageHead($metaTags->getMetaTagArray(), $linkTags->getLinkTagArray());
+
+            # 6: Render page head
             $htmlPageHead->renderHtmlPageHead();
 
-            # 6: Build site navigation
+            # 7: Build site navigation
             $navigationBar = new HtmlPageNavigationBuilder($strPageName);
 
-            # 7: Build page Footer
+            # 8: Build page Footer
             $pageFooter = new HtmlPageFooter();
 
-            # 8: Prepare any global script tags - jQuery, Bootstrap, etc...
+            # 9: Prepare any global script tags - jQuery, Bootstrap, etc...
             $globalScriptTags = new HtmlPageGlobalScriptBuilder();
 
-            # 9: Prepare any page specific tags here
+            # 10: Prepare any page specific tags here
             $localScriptTags = new HtmlPageLocalScriptBuilder($strPageName);
 
-            # NEED TO LOAD INDIVIDUAL PAGE SCRIPTING HERE!!!!!!!
-            # ADD CLASS, BUILD SCRIPT LINKS,
-            # PASS IN!
-
+            # 11: Prepare page body
             $htmlPageBody = new HtmlPageBody($navigationBar->getNavigationBar(), $pageFooter->getHtmlPageFooter(),
                 $globalScriptTags->getScriptTagArray(), $localScriptTags->getScriptTagArray());
 
+            # 12: Render page body
             $htmlPageBody->renderHtmlPageBody();
-
-
-            // BUILD HEAD
-
-
-            // BUILD BODY
-
         }
     }
 }

@@ -104,16 +104,12 @@ abstract class HtmlPageAbstract
             'crossorigin' => 'anonymous',
         ],
         'namespace' => [
-            'call' => ['global'],
+            'call' => ['services'],
             'src' => '/etg/public/www/javascript/applicationNamespace.js',
         ],
         'servicesFunctions' => [
             'call' => ['services'],
             'src' => '/etg/public/www/javascript/services/servicesFunctions.js',
-        ],
-        'test' => [
-            'call' => ['services'],
-            'src' => '/etg/public/www/javascript/services/test.js',
         ],
         'services' => [
             'call' => ['services'],
@@ -128,33 +124,5 @@ abstract class HtmlPageAbstract
     protected static $htmlPageContent = "";
 
     protected static $htmlPageLocalJavascript = false;
-
-
-
-
-
-
-
-    public $htmlHead;
-
-    public $htmlHeadIconLinks;
-
-    public $htmlBody;
-
-    public $htmlBodyPageWrapper;
-
-    public $htmlBodyBanner;
-
-    public $htmlBodyNavigationBar;
-
-    public $htmlBodyCategoryBar;
-
-    public $htmlBodyPageContents;
-
-    public $htmlBodyPageSubCategoryBar;
-
-    public $htmlBodyFooter;
-
-    public $htmlBodyScriptLinks;
 
 }

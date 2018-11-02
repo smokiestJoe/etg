@@ -43,5 +43,6 @@ function displayServiceModule()
 
     </div>
 
-<?php
+    <?php
+
 }
